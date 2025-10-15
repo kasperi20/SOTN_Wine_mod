@@ -35,12 +35,9 @@ class cfgWeapons {
         class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 5;
         };
-        XGVAR(consumeTime) = 10;
-        XGVAR(thirstQuenched) = 10;
-        XGVAR(consumeText) = CSTRING(DrinkingFromX);
+        acex_field_rations_consumeTime = 10;
+        acex_field_rations_thirstQuenched = 10;
         acex_field_rations_replacementItem = "SOTN_Wine_Half";
-        XGVAR(consumeAnims)[] = {QGVAR(drinkStand), QGVAR(drinkCrouch), QGVAR(drinkProne)};
-        XGVAR(consumeSounds)[] = {QGVAR(drink1), QGVAR(drink1), QGVAR(drink2)};
         ACE_isFieldRationItem = 1;
     };
 
@@ -53,9 +50,9 @@ class cfgWeapons {
             mass = 3;
         };
         acex_field_rations_replacementItem = "SOTN_Wine_Empty";
-        XGVAR(refillItem) = "SOTN_Wine";
-        XGVAR(refillAmount) = 0.5;
-        XGVAR(refillTime) = 8;
+        acex_field_rations_refillItem = "SOTN_Wine";
+        acex_field_rations_thirstQuenched = 0.5;
+        acex_field_rations_refillTime = 8;
     };
 
     class SOTN_Wine_Empty: SOTN_Wine {
@@ -65,11 +62,11 @@ class cfgWeapons {
         class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 1;
         };
-        XGVAR(refillItem) = "SOTN_Wine";
-        XGVAR(thirstQuenched) = 0;
-        XGVAR(replacementItem) = "";
-        XGVAR(refillAmount) = 1;
-        XGVAR(refillTime) = 8;
+        acex_field_rations_thirstQuenched = 0;
+        acex_field_rations_replacementItem = "";
+        acex_field_rations_refillItem = "SOTN_Wine";
+        acex_field_rations_refillAmount = 1;
+        acex_field_rations_refillTime = 8;  
     };
 
 };
@@ -96,7 +93,7 @@ class cfgVehicles {
         displayName = "wine bottle half";
         vehicleClass = "Items";
         class TransportItems {
-            MACRO_ADDITEM(SOTN_Wine,1);
+            MACRO_ADDITEM(SOTN_Wine_Half,1);
         };
     };
     
@@ -107,7 +104,7 @@ class cfgVehicles {
         displayName = "wine bottle empty";
         vehicleClass = "Items";
         class TransportItems {
-            MACRO_ADDITEM(SOTN_Wine,1);
+            MACRO_ADDITEM(SOTN_Wine_Empty,1);
         };
     };
 };
