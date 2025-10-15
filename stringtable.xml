@@ -1,0 +1,13 @@
+<Project name="EXZ">
+    <Package name="SOTN_WINE">
+        <Key ID="STR_EXZ_SOTN_WINE_Wine_Bottle_Description">
+            <English>A bottle of Chat Tigre Chris Gros</English>
+        </Key>
+        <Key ID="STR_EXZ_SOTN_WINE_Wine_Bottle_Half_Description">
+            <English>A bottle of Chat Tigre Chris Gros</English>
+        </Key>
+        <Key ID="STR_EXZ_SOTN_WINE_Wine_Bottle_Empty_Description">
+            <English>A bottle of Chat Tigre Chris Gros</English>
+        </Key>
+    </Package>
+</Project>
